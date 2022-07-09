@@ -1,0 +1,69 @@
+//using Anonymous function (function without function name)
+An anonymous function is a function that was declared without any named identifier to refer to it.  also known as lambda functions
+
+document.querySelector("button").addEventListener("click", function () { alert("I got clicked using Anonymous function") });
+
+
+// consolePracticeCode
+$0.addEventListener("click",function(){console.log("javascript is clicked")});
+
+
+//Higher order function are function under function
+function multiply(num1, num2) {
+    return num1 * num2;
+}
+function add(num1, num2) {
+    return num1 + num2;
+}
+function calculator(num1, num2, operator) {
+    return operator(num1, num2);
+}
+calculator(4, 7, multiply);
+calculator(4, 7, add);
+debugger;
+calculator(4, 7, multiply);
+
+// Higher Order Function Challenge Solution
+function add(num1, num2) {
+    return num1 + num2;
+}
+
+function subtract(num1, num2) {
+    return num1 - num2;
+}
+
+function multiply(num1, num2) {
+    return num1 * num2;
+}
+
+function divide(num1, num2) {
+    return num1 / num2;
+}
+
+function calculator(num1, num2, operator) {
+    return operator(num1, num2);
+}
+
+//how to make object in javascript
+var houseKeeper1={
+    yearsOfExperience:12,
+    name:"tommy",
+    city:"ggn",
+    cleaningProperty:["bathroom","kitchen","bedroom"]
+}
+
+//by using constructor you can create objects as many as you want.
+function BellBoy(yearsOfExperience, name, city, cleaningProperty) {
+    this.yearsOfExperience = yearsOfExperience;
+    this.name = name;
+    this.city = city;
+    this.cleaningProperty = cleaningProperty;
+    //you can declare method inside it as well. 
+    this.clean = function () {
+        alert("cleaning in progess....");
+    }
+}
+
+var BellBoy1 = new BellBoy(12,"cghj","dli","bedroom");
+BellBoy1.city;
+BellBoy1.clean();
